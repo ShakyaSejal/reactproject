@@ -5,6 +5,7 @@ import AddBlog from "./pages/blog/AddBlog";
 import Register from "./pages/auth/Register";
 import Login from "./pages/auth/Login";
 import Navbar from "./components/navbar/Navbar";
+import EditBlog from "./pages/blog/EditBlog";
 
 function App() {
   return (
@@ -14,8 +15,10 @@ function App() {
           <Route path="/register" element={<Register/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/" element={<Home/>} />
-          <Route path="/addblog" element={<AddBlog />} />
+          <Route path="/blog/add" element={<AddBlog />} />
           <Route path="/navbar" element={<Navbar/>}></Route>
+          <Route path="/blog/edit" element={<EditBlog/>}></Route>
+
         </Routes>
       </BrowserRouter>
     </>
