@@ -1,9 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Card = () => {
   return (
     <>
-      <div class="max-w-sm rounded overflow-hidden shadow-lg">
+    <Link to="/blog/id">
+    <div class="max-w-sm rounded overflow-hidden shadow-lg">
         <img
           class="w-full"
           src="https://png.pngtree.com/png-clipart/20190902/original/pngtree-hand-drawn-cartoon-green-bacteria-png-element-png-image_4395784.jpg"
@@ -29,6 +31,8 @@ const Card = () => {
           </span>
         </div>
       </div>
+      </Link>
+      
     </>
   );
 };
