@@ -18,7 +18,7 @@ const AddBlog = () => {
       const response = await axios.post(`${api}/api/user/blog`, data, {
         headers: {
           "Content-Type": "multipart/form-data",
-          "Authorization": "Bearer " + localStorage.getItem("token"),
+          "Authorization":  "Bearer " + localStorage.getItem("token"),
         },
       });
       if (response.status===201) {
@@ -28,10 +28,11 @@ const AddBlog = () => {
           alert("something went wrong")
         }
     }
-    catch(error){
-      const message = error.response.message;
-      alert("ezx");
-      
+
+    catch(error) {
+      const message = error.response?.data?.message;
+      console.error("API error:", error);
+      alert(message || "An unknown error occurred.");
     }
    
   };
